@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .todo-header {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .todo-header h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .todo-header input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .todo-header button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .todo-list-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .todo-list {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 45%;
+        }
+
+        .todo-list h2 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        .todo-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .todo-list li {
+            padding: 8px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+
+        .todo-list li:last-child {
+            border-bottom: none;
+        }
+
+        .todo-list input[type="text"] {
+            width: 60%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+
+        .todo-list button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .delete-heading {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="todo-header">
+            <h1>My Todo List</h1>
+            <input type="text" id="newHeading" placeholder="Enter heading">
+            <button onclick="addHeading()">Add Heading</button>
+        </div>
+
+        <div class="todo-list-container">
+            <div class="todo-list">
+                <h2>Grocery Items <button class="delete-heading">Delete Heading</button></h2>
+                <ul>
+                    <li>Milk</li>
+                    <li>Bread</li>
+                    <li>Butter</li>
+                </ul>
+                <input type="text" placeholder="Add List">
+                <button>Add List</button>
+            </div>
+
+            <div class="todo-list">
+                <h2>Office Work <button class="delete-heading">Delete Heading</button></h2>
+                <ul>
+                    <li>Finish Report</li>
+                    <li>Prepare Presentation</li>
+                    <li>Schedule Meeting</li>
+                </ul>
+                <input type="text" placeholder="Add List">
+                <button>Add List</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addHeading() {
+            //  add heading logic here
+            alert('Add heading functionality to be implemented!');
+        }
+    </script>
+
+</body>
+</html>
