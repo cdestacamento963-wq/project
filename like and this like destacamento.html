@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like and Dislike Buttons</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="bg-white p-8 rounded-lg shadow-xl max-w-2xl w-full">
+        <!-- The new description -->
+        <p class="text-sm text-gray-600 leading-relaxed mb-6">
+            sss React, a JavaScript library developed by Facebook, has revolutionized the landscape of front-end web development with its component-based architecture. At its core, React enables developers to break down complex user interfaces into reusable, encapsulated components, each managing its own state and behavior. By utilizing a virtual DOM, React efficiently updates the UI in response to changes in data, resulting in faster and smoother user experiences. Widely adopted for building single-page applications (SPAs), web applications, and even mobile apps through frameworks like React Native, React offers a declarative approach to UI development, where developers describe how the UI should look based on the application state. Its ecosystem is rich with tools and libraries, such as React Router for navigation and Redux for state management, facilitating the creation of robust and scalable applications. With its emphasis on component reusability, performance optimizations, and developer-friendly features, React has become a cornerstone of modern web development, empowering developers to create dynamic and interactive user interfaces with ease.
+        </p>
+        
+        <!-- Like and Dislike Buttons -->
+        <div class="flex space-x-4 justify-start mt-8">
+            <button id="like-btn" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105 shadow-md" onclick="updateCount('like')">
+                Like (<span id="like-count">0</span>)
+            </button>
+            <button id="dislike-btn" class="bg-white text-blue-500 border border-blue-500 font-medium py-2 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-50 shadow-md" onclick="updateCount('dislike')">
+                Dislike (<span id="dislike-count">0</span>)
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Initialize the counts
+        let likeCount = 0;
+        let dislikeCount = 0;
+
+        /**
+         * Updates the like or dislike count based on the button clicked.
+         * @param {string} type - 'like' or 'dislike'
+         */
+        function updateCount(type) {
+            if (type === 'like') {
+                likeCount++;
+                document.getElementById('like-count').textContent = likeCount;
+            } else if (type === 'dislike') {
+                dislikeCount++;
+                document.getElementById('dislike-count').textContent = dislikeCount;
+            }
+        }
+    </script>
+
+</body>
+</html>
